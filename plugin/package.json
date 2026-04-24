@@ -1,0 +1,25 @@
+{
+  "name": "openclaw-dynamic-context",
+  "version": "0.1.0",
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2",
+      "minGatewayVersion": "2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2",
+      "pluginSdkVersion": "2026.3.24-beta.2"
+    }
+  },
+  "scripts": {
+    "test": "tsx --test engine.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "yaml": "^2.8.3"
+  }
+}

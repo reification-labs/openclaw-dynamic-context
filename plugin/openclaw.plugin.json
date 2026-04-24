@@ -1,0 +1,24 @@
+{
+  "id": "dynamic-context",
+  "name": "Dynamic Context Engine",
+  "description": "Tiers memory into include/reference/off via context.yaml. Injects included threads as system prompt additions.",
+  "kind": "context-engine",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "contextYamlPath": {
+        "type": "string",
+        "description": "Path to context.yaml (absolute or relative to workspace)"
+      },
+      "threadsDir": {
+        "type": "string",
+        "description": "Path to threads directory"
+      },
+      "workspaceDir": {
+        "type": "string",
+        "description": "Path to workspace root"
+      }
+    }
+  }
+}

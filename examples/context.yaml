@@ -1,0 +1,29 @@
+# context.yaml — Dynamic Context Configuration
+# Source of truth for what's in the agent's context window.
+# Both human and agent can edit this file directly.
+# Changes take effect on next assemble() call.
+
+version: 2
+
+threads:
+  # --- Include (fully loaded into system prompt) ---
+  active-project: include
+  current-research: include
+
+  # --- Reference (known, loadable on demand) ---
+  relevant-idea: reference
+  older-topic: reference
+
+  # --- Off (cold storage) ---
+  archived-discussion: off
+  completed-task: off
+
+files:
+  # Workspace files to track
+  NOTES.md: include
+  MODELS.md: reference
+
+topic_areas:
+  # Broader knowledge areas (for reference-tier awareness)
+  architecture: reference
+  research: reference
